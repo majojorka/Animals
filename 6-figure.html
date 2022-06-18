@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тэг Figure</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: fantasy;
+        }
+
+        .figure {
+            flex-wrap: wrap;
+        }
+
+        .anim img {
+            display: block;
+            transition: 1s;
+        }
+
+        .content {
+            display: inline-block;
+            overflow: hidden;
+
+            position: relative;
+            max-height: 600px;
+            max-width: 400px;
+            height: 100%;
+            width: 100%;
+            margin: 5px 0 0;
+            align-items: center;
+        }
+
+        .content:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(50deg, #EB5757, #000000);
+            opacity: 0;
+            transition: .7s;
+        }
+
+        .content:hover:after {
+            opacity: .6;
+            z-index: 100;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 43%;
+            transform: translate(-50% -57%);
+            z-index: 1000;
+            font-size: 30px;
+            font-weight: bold;
+            transform: scale(0);
+            transition: all .8s;
+        }
+
+        .antilopa {
+            left: 36%;
+            background: linear-gradient(45deg, #f0ff3b, #dd0707);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .panda {
+            background: linear-gradient(45deg, black, white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fox {
+            background: linear-gradient(45deg, yellow, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ezic {
+            left: 36%;
+            background: linear-gradient(45deg, #b5b79d, #dd0707);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .horse {
+            background: linear-gradient(45deg, #d69687, #362424);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .koala {
+            background: linear-gradient(45deg, yellow, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content:hover span {
+            transform: scale(1.2);
+            z-index: 1000;
+        }
+
+        .content:hover img {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+
+<body>
+    <figure class="figure">
+
+        <div class="content">
+            <div class="anim"><span class="fox">Fox</span><img class="anim" src="https://avatarko.ru/img/kartinka/31/zhivotnye_lisa_30761.jpg"></div>
+        </div>
+
+        <div class="content">
+            <div class="anim"><span class="antilopa">Antilopa</span><img class="anim" src="https://st2.depositphotos.com/1004410/5192/i/600/depositphotos_51922819-stock-photo-waterbuck-bull-with-huge-horns.jpg"></div>
+        </div>
+
+        <div class="content">
+            <div class="anim"><span class="panda">Panda</span><img class="anim" src="https://i.pinimg.com/474x/bf/89/02/bf890275f00b3c05db9c35b8f915e9f0.jpg"></div>
+        </div>
+
+        <div class="content">
+            <div class="anim"><span class="ezic">Ezic</span><img class="anim" src="https://www.cmzoo.org/wp-content/uploads/hedgehog2-400x600.jpg"></div>
+        </div>
+
+        <div class="content">
+            <div class="anim"><span class="horse">Horse</span><img class="anim" src="https://zooidaho.org/wp-content/uploads/2016/10/IMG_0185-400x600.jpg"></div>
+        </div>
+
+        <div class="content">
+            <div class="anim"><span class="koala">АЛИНА</span><img class="anim" src="https://i.pinimg.com/originals/3f/f6/88/3ff68898faa1c63203dc6ad8cbfae767.jpg"></div>
+
+        </div>
+    </figure>
+</body>
+
+</html>
